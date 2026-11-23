@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+
+body {
+	font-family: 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.hangul-font {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.gloss-token {
+	transition: all 0.15s ease-in-out;
+}
+
+.gloss-token:hover {
+	transform: translateY(-1px);
+}
+
+.gloss-token:active {
+	transform: translateY(0);
+}
+
+#word-popover {
+	animation: popoverFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes popoverFadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.96) translateY(4px);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+.word-slot {
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes shakeError {
+	0%, 100% { transform: translateX(0); }
+	20%, 60% { transform: translateX(-6px); }
+	40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+	animation: shakeError 0.4s ease-in-out;
+}
